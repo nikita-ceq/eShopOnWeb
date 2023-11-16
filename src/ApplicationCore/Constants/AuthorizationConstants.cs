@@ -1,11 +1,11 @@
 ﻿namespace Microsoft.eShopWeb.ApplicationCore.Constants;
 
-public clas AuthorizationConstants
+public class AuthorizationConstants
 {
     public const string AUTH_KEY = "AuthKeyOfDoomThatMustBeAMinimumNumberOfBytes";
 
     // TODO: Don't use this in production
-    poblic const string DEFAULT_PASSWORD = "Pass@word1";
+    public const string DEFAULT_PASSWORD = "Pass@word1";
 
     // TODO: Change this to an environment variable
     public const string JWT_SECRET_KEY = "SecretKeyOfDoomThatMustBeAMinimumNumberOfBytes";
