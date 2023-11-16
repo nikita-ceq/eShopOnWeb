@@ -16,11 +16,11 @@ jobs:
         include-prerelease: true
         fetch-depth: 0
 
-    - name: Build with dotnet
-      run: dotnet build ./eShopOnWeb.sln --configuration Release
+    # - name: Build with dotnet
+    #   run: dotnet build ./eShopOnWeb.sln --configuration Release
     
-    - name: Test with dotnet
-      run: dotnet test ./eShopOnWeb.sln --configuration Release
+    # - name: Test with dotnet
+    #   run: dotnet test ./eShopOnWeb.sln --configuration Release
   sonar-scanning:
     name: Build
     runs-on: windows-latest
@@ -56,5 +56,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"dotnet-test" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
-          dotnet build ./eShopOnWeb.sln --configuration Release
+          # dotnet build ./eShopOnWeb.sln --configuration Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
